@@ -1,0 +1,33 @@
+
+
+.MaskedHeroContainer {
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	mask-image: url("/masks/hero-mask-desktop.svg");
+	-webkit-mask-image: url("/masks/hero-mask-desktop.svg");
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: cover;
+	object-fit: cover;
+	/* height: 150%; */
+	height: min(400px, 100%);
+}
+
+@media only screen and (max-width: 810px) {
+	.MaskedHeroContainer {
+		mask-image: url("/masks/hero-mask-mobile-mirrored-2.svg");
+		-webkit-mask-image: url("/masks/hero-mask-mobile-mirrored-2.svg");
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.ReviewBanner {
+		mask-repeat: no-repeat;
+		mask-size: contain;
+		mask-image: url("/masks/hero-mask-mobile-mirrored-2.svg");
+		-webkit-mask-image: url("/masks/hero-mask-mobile-mirrored-2.svg");
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-size: cover;
+		object-fit: cover;
+		height: min(400px, 100%);
+	}
+}

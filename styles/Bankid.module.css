@@ -1,0 +1,225 @@
+.bankidRootContainer {
+	display: flex;
+	flex-direction: column;
+	font-family: "Inter-Medium";
+	max-width: 380px;
+	border-radius: 30px;
+	margin-bottom: auto;
+	margin-top: auto;
+	/* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+
+.bankidContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.bankidContainer h2 {
+	font-size: clamp(0.85rem, 5.5vw, 1.3rem);
+	font-weight: 500;
+}
+
+.bankidLabelContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.bankidInput:focus {
+	background: transparent !important;
+	background-color: transparent !important;
+	box-shadow: none;
+	stroke: 0px;
+}
+
+.bankidInput:focus-visible {
+	outline: none;
+	background-color: transparent !important;
+	background: transparent !important;
+}
+
+.bankidInput input:-internal-autofill-selected {
+	background-color: transparent !important;
+	background: transparent !important;
+}
+
+.bankidInputDiv {
+	position: relative;
+}
+
+.bankidInput {
+	display: flex;
+	flex-direction: row;
+	border-radius: 10px;
+	border: 2px solid #5e5e5e;
+	font-family: "IBMlight", sans-serif;
+	padding: 5px 10px 1px 50px;
+	gap: 10px;
+	width: 100%;
+	height: 56px;
+	background: transparent;
+}
+
+.bankidButton {
+	background: #336662;
+	border-radius: 10px;
+	font-family: "IBMregular", sans-serif;
+	width: 100%;
+	height: 56px;
+	color: white;
+	text-align: center;
+}
+
+.bankidContainer h3 {
+	font-size: 0.7rem;
+	font-weight: 500;
+}
+
+.bankidContainer a {
+	color: blue;
+	/* underline */
+	text-decoration: underline;
+}
+
+.bankidButtonContainer {
+	position: relative;
+}
+
+.bankidButtonContainer img {
+	width: 43px;
+	position: absolute;
+	top: 15%;
+	left: 1%;
+}
+
+.SwishContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	max-width: 340px;
+	margin: 40px auto auto auto;
+	background: white;
+	border-radius: 30px;
+	padding: 1.2rem;
+	/* padding-bottom: 3rem; */
+	/* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+
+.Payment_h1,
+.Payment_p,
+.Payment_title {
+	font-family: "IBM";
+	text-align: left;
+}
+
+.Payment_h1 {
+	font-size: 32px;
+	font-weight: 500;
+	text-align: center;
+}
+
+.Payment_title,
+.Bankid_title {
+	font-family: "Inter-Bold";
+	color: #004e49;
+	font-size: 1.2rem;
+	padding-bottom: 0.8rem;
+}
+
+.Payment_p {
+	font-family: "IBMregular";
+	font-size: 0.9rem;
+}
+
+.SwishBtn {
+	border-radius: 10px;
+	background: #336662;
+	font-family: "Inter-Medium", sans-serif;
+	font-size: 18px;
+	width: 100%;
+	height: 56px;
+	color: white;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.SwishSubmittingContainer {
+	display: flex;
+	border-radius: 10px;
+	background: #336662;
+	border: 2px solid #336662;
+	font-family: "IBMregular", sans-serif;
+	font-size: 24px;
+	width: 100%;
+	height: 56px;
+	color: white;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.SwishSubmittingContainer:hover {
+	cursor: not-allowed;
+}
+
+/*################## The Confirmation Payment Page ################ */
+
+.PaymentConfirmationRoot {
+	background: #00514b;
+}
+
+.PaymentConfirmationPage {
+	display: flex;
+	/* background-color: white; */
+	flex-direction: column;
+	border-radius: 30px;
+	max-width: 400px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 1.5rem;
+	font-family: "IBM";
+	color: white;
+}
+
+.PaymentConfirmation_div_h2 {
+	display: flex;
+	flex-direction: row;
+}
+
+.PaymentConfirmationPage h1,
+.PaymentConfirmationPage h2,
+.PaymentConfirmationPage h3 {
+	font-family: "IBM";
+	font-size: 0.9rem;
+}
+
+.PaymentConfirmationPage h1 {
+	font-size: clamp(24px, 5vw, 40px);
+}
+
+.PaymentConfirmationPage h2 {
+	font-size: clamp(20px, 5vw, 25px);
+}
+
+.PaymenConfirmation_checkmark {
+	width: 30px;
+	height: 30px;
+	margin-right: 0.5rem;
+}
+
+.PaymentConfirmationPage button {
+	height: 56px;
+	margin-top: 3rem;
+	background: #00514b;
+	border-radius: 10px;
+	color: white;
+	font-family: "IBMregular";
+	font-size: 24px;
+}
+
+@media only screen and (max-width: 650px) {
+	.bankidRootContainer {
+		border-radius: 30px 30px 0 0;
+		margin-bottom: 0;
+	}
+}

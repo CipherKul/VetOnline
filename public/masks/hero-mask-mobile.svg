@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="375"
+   height="210"
+   viewBox="0 0 375 210"
+   fill="none"
+   version="1.1"
+   id="svg876"
+   sodipodi:docname="hero-mask-mobile.svg"
+   inkscape:version="1.1.2 (0a00cf5, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs880" />
+  <sodipodi:namedview
+     id="namedview878"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     showgrid="false"
+     inkscape:zoom="1.181552"
+     inkscape:cx="164.19083"
+     inkscape:cy="108.75527"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1264" />
+  <mask
+     id="mask0"
+     mask-type="alpha"
+     maskUnits="userSpaceOnUse"
+     x="0"
+     y="0"
+     width="741"
+     height="683">
+    <path
+       d="M 49.9542,683 C -80.3048,438.388 59.4632,167.94 292.708,0 H 740 v 683 z"
+       fill="#000000"
+       id="path869" />
+  </mask>
+  <g
+     style="fill:none"
+     id="g1264"
+     transform="matrix(0,-0.9131653,1.0830468,0,3.0944457,677.08245)">
+    <path
+       d="M 554.29413,343.38826 C 533.04382,283.55189 515.48294,220.02107 512.09055,160.84645 508.51931,98.552509 520.64972,41.086164 560.70689,-2.1604564 L 741.46756,-2.8571671 V 342.76182 Z"
+       fill="#000000"
+       id="path1252"
+       style="stroke-width:0.410063"
+       sodipodi:nodetypes="cscccc" />
+  </g>
+</svg>
