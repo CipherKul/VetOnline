@@ -52,6 +52,7 @@ module.exports = {
 			screens: {
 				mdd: "800px",
 				mobile: "490px",
+				ipad:"1021px",
 				xs: "375px",
 				xxs: "320px"
 			},
