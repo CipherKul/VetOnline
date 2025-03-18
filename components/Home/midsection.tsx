@@ -29,7 +29,7 @@ const Midsection = () => {
 
   return (
     <div>
-      <section className="py-14 bg-[#F3FFF6]">
+      <section className=" bg-[#F3FFF6]">
         <div className="container mx-auto px-4">
           <p className="text-center text-gray-500 text-sm mb-2">Fakta om oss</p>
           <h2 className="text-center text-2xl md:text-4xl font-bold text-teal-800 mb-8">
@@ -75,7 +75,7 @@ const Midsection = () => {
             <div className="md:w-1/2 mb-6 md:mb-0">
               <Image
                 src={`/midsection/${
-                  isMobile ? 'doctor-mobile.png' : 'doctor-web.png'
+                  isMobile ? "doctor-mobile.png" : "doctor-web.png"
                 }`}
                 alt="Veterinarian with dog"
                 width={700}
@@ -111,7 +111,7 @@ const Midsection = () => {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 export default Midsection
