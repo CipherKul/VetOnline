@@ -1,7 +1,7 @@
 import Image from 'next/image'
 export default function About2() {
   return (
-    <section className="bg-white sm:bg-[#F3FFF6] w-full py-20">
+    <section className="bg-white sm:bg-[#F3FFF6] w-full py-10 md:py-20">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex flex-col justify-between md:flex-row items-center">
           {/* Left section */}
