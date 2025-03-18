@@ -42,7 +42,7 @@ export default function About() {
                     color="#004E49"
                   />
                 </div>
-                <div className="w-full h-[2px] bg-[#004E49]"></div>
+                <div className="w-full md:h-[2px] h-[1.5px] bg-[#004E49]"></div>
                 <div className="flex items-center gap-3 pb-3 pl-3 text-[#004E49] border-b-2 md:border-b-0">
                   <Image
                     src="/images/landing/cat.png"
@@ -63,12 +63,13 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="md:hidden flex">
+      <section className="md:hidden w-full flex">
         <Image
           src={'/images/landing/dog.png'}
           alt="Dog Image"
-          width={400}
+          width={500}
           height={300}
+          className="overflow-hidden"
         />
       </section>
     </>
