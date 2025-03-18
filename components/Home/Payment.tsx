@@ -1,5 +1,6 @@
 import Image from 'next/image'
-
+import MasterCrad from '@/public/icons/mastercard.svg'
+import ApplePayCrad from '@/public/icons/applepay.svg'
 export default function Payment() {
   return (
     <section className="py-12 bg-[#F3FFF6] md:bg-white">
@@ -42,18 +43,18 @@ export default function Payment() {
             className="w-[90px] md:w-[120px]"
           />
           <Image
-            src="/images/landing/mastercard.png"
+            src={MasterCrad}
             alt="Mastercard"
             width={90}
             height={30}
             className="w-[90px] md:w-[120px]"
           />
           <Image
-            src="/images/landing/applepay.png"
+            src={ApplePayCrad}
             alt="Apple Pay"
-            width={75}
-            height={18}
-            className="w-[75px] md:w-[100px]"
+            width={18}
+            height={20}
+            className="w-[75px] h-[60px] md:w-[100px]"
           />
         </div>
       </div>

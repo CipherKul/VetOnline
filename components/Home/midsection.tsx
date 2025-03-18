@@ -43,7 +43,7 @@ const Midsection = () => {
 
   return (
     <div>
-      <section className=" bg-[#F3FFF6]">
+      <section className="py-20 bg-[#F3FFF6] shadow-xl">
         <div className="container mx-auto px-4">
           <p className="text-center text-gray-500 text-sm mb-2">Fakta om oss</p>
           <h2 className="text-center text-2xl md:text-4xl font-bold text-teal-800 mb-8">
@@ -60,7 +60,7 @@ const Midsection = () => {
                 {testimonials.map((testimonial) => (
                   <div
                     key={testimonial.id}
-                    className="snap-center shrink-0 w-[85vw] bg-white rounded-lg shadow-lg"
+                    className="snap-center shrink-0 w-[70vw] bg-white rounded-lg shadow-lg"
                   >
                     <div>
                       <Image
@@ -84,13 +84,13 @@ const Midsection = () => {
               </div>
               <button
                 onClick={() => scroll('left')}
-                className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10"
+                className="absolute hidden left-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10"
               >
                 <ChevronLeft className="text-[#004E49]" />
               </button>
               <button
                 onClick={() => scroll('right')}
-                className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10"
+                className="absolute hidden right-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10"
               >
                 <ChevronRight className="text-[#004E49]" />
               </button>
@@ -132,7 +132,7 @@ const Midsection = () => {
             <div className="md:w-[60%] mb-6 md:mb-0">
               <Image
                 src={`/midsection/${
-                  isMobile ? "doctor-mobile.png" : "doctor-web.png"
+                  isMobile ? 'doctor-mobile.png' : 'doctor-web.png'
                 }`}
                 alt="Veterinarian with dog"
                 width={800}
@@ -166,7 +166,7 @@ const Midsection = () => {
         </div>
       </section>
     </div>
-  );
+  )
 }
 
 export default Midsection
