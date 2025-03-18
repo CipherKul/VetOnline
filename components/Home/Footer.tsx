@@ -24,9 +24,10 @@ const Footer = () => {
           <div className="flex justify-between flex-col md:flex-row  mx-auto px-4 py-10">
             <div className="space-y-2 border-t-[1px] w-[100%] md:w-[40%]">
               <div className="flex flex-col gap-4 pt-10 pb-10 md:pb-0">
-                {FooterItemsName.map((item) => {
+                {FooterItemsName.map((item, index) => {
                   return (
                     <Link
+                      key={index}
                       href={''}
                       className="text-sm md:text-base block hover:text-teal-200"
                     >
