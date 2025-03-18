@@ -42,11 +42,11 @@ const Midsection = () => {
   ]
 
   return (
-    <>
-      <section className="py-14 md:bg-[#F3FFF6] shadow-lg">
-        <div className="w-full px-4 md:px-0">
-          <p className="text-center text-[#787878]">Fakta och råd</p>
-          <h2 className="text-[#004E49] text-xl md:text-5xl font-bold mb-6 text-center">
+    <div>
+      <section className=" bg-[#F3FFF6]">
+        <div className="container mx-auto px-4">
+          <p className="text-center text-gray-500 text-sm mb-2">Fakta om oss</p>
+          <h2 className="text-center text-2xl md:text-4xl font-bold text-teal-800 mb-8">
             Läs vad veterinärer rekommenderar
           </h2>
 
@@ -132,7 +132,7 @@ const Midsection = () => {
             <div className="md:w-[60%] mb-6 md:mb-0">
               <Image
                 src={`/midsection/${
-                  isMobile ? 'doctor-mobile.png' : 'doctor-web.png'
+                  isMobile ? "doctor-mobile.png" : "doctor-web.png"
                 }`}
                 alt="Veterinarian with dog"
                 width={800}
@@ -165,8 +165,8 @@ const Midsection = () => {
           </div>
         </div>
       </section>
-    </>
-  )
+    </div>
+  );
 }
 
 export default Midsection

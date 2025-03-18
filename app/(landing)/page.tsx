@@ -14,5 +14,5 @@ export default function Home() {
       <AboutUsSection /> */}
       <section id="contact-section" className="bg-[#D9FCB4]"></section>
     </main>
-  )
+  );
 }
