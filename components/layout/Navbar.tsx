@@ -44,7 +44,7 @@ export default function Navbar() {
       </div>
 
       <div className="container mx-auto flex justify-between items-center md:pb-0 pb-12">
-        <div className="text-xl md:block hidden mt-2 font-bold">
+        <div className="text-xl md:block hidden md:ml-8 mt-2 font-bold">
           <svg
             width="269"
             height="65"

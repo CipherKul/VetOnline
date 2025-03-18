@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Check } from 'lucide-react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import FAQ from './FAQ'
 import Payment from './Payment'
 import About2 from './About2'
@@ -14,21 +14,21 @@ import Review from './review'
 export default function Herosection() {
   const [isMobile, setIsMobile] = useState(false)
 
-  const sliderRef = useRef<HTMLDivElement>(null)
-  const scroll = (direction: 'left' | 'right') => {
-    if (sliderRef.current) {
-      const scrollAmount = sliderRef.current.clientWidth
-      const newScrollLeft =
-        direction === 'left'
-          ? sliderRef.current.scrollLeft - scrollAmount
-          : sliderRef.current.scrollLeft + scrollAmount
+  // const sliderRef = useRef<HTMLDivElement>(null)
+  // const scroll = (direction: 'left' | 'right') => {
+  //   if (sliderRef.current) {
+  //     const scrollAmount = sliderRef.current.clientWidth
+  //     const newScrollLeft =
+  //       direction === 'left'
+  //         ? sliderRef.current.scrollLeft - scrollAmount
+  //         : sliderRef.current.scrollLeft + scrollAmount
 
-      sliderRef.current.scrollTo({
-        left: newScrollLeft,
-        behavior: 'smooth',
-      })
-    }
-  }
+  //     sliderRef.current.scrollTo({
+  //       left: newScrollLeft,
+  //       behavior: 'smooth',
+  //     })
+  //   }
+  // }
 
   useEffect(() => {
     const handleResize = () => {
