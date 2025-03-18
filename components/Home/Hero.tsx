@@ -73,10 +73,10 @@ export default function Herosection() {
       <section className="bg-[#004E49]  text-white relative overflow-hidden shadow-xl">
         <div className="container mx-auto flex flex-col-reverse md:flex-row items-center">
           {/* Left Side - Text Content */}
-          <div className="w-full md:w-1/2 p-8 md:p-12 z-10">
+          <div className="w-full md:w-1/2 p-4 md:p-12 z-10">
             <h1 className="text-2xl md:text-5xl font-bold tracking-wide drop-shadow-[2px_2px_2px_rgba(0,0,0,1)]">
               Få recept på{" "}
-              <span className="text-[#B2FFE4] tracking-wide font-bold">
+              <span className="text-[#B2FFE4]  font-mono tracking-normal font-bold h-10 md:text-5xl md:drop-shadow-[2px_2px_2px_rgba(20,20,20,1)]">
                 fästingmedel
               </span>
             </h1>
@@ -106,7 +106,7 @@ export default function Herosection() {
               </li>
             </ul>
             <div className="md:w-auto w-full flex">
-              <button className="mt-8 bg-white text-[#004D40] md:w-auto w-full font-medium px-24 py-1.5 rounded-md hover:bg-gray-100 transition-colors drop-shadow-[2px_2px_2px_rgba(10,10,10,1)]">
+              <button className="mt-8 bg-white text-[#004D40] md:w-auto w-full font-medium px-4 md:py-1.5 md:px-24 py-3 rounded-md hover:bg-gray-100 transition-colors drop-shadow-[2px_2px_2px_rgba(10,10,10,1)]">
                 Få recept idag
               </button>
             </div>
@@ -135,7 +135,7 @@ export default function Herosection() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-[#F3FFF6] md:rounded-none rounded-r-[120px] rounded-l-[70px] py-6 shadow-2xl drop-shadow-[1px_1px_1px_rgba(0,0,0,0.01)]">
+      <section className="bg-[#F3FFF6] md:rounded-none rounded-br-[120px] rounded-bl-[70px] py-6 shadow-2xl drop-shadow-[1px_1px_1px_rgba(0,0,0,0.01)]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:divide-y-0 divide-y-2 md:divide-x-2 divide-gray-200 md:grid-cols-3 gap-4 relative">
             {/* First Stat */}
