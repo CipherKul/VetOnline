@@ -1,8 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { Check, ChevronLeft, ChevronRight } from 'lucide-react'
-import Slider from 'react-slick'
+import { Check } from 'lucide-react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { useEffect, useRef, useState } from 'react'
@@ -10,6 +9,7 @@ import FAQ from './FAQ'
 import Payment from './Payment'
 import About2 from './About2'
 import About from './About'
+import Review from './review'
 
 export default function Herosection() {
   const [isMobile, setIsMobile] = useState(false)
@@ -43,50 +43,6 @@ export default function Herosection() {
     }
   }, [])
 
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  }
-
-  const reviews = [...Array(5)].map((_, i) => (
-    <div
-      key={i}
-      className={`${
-        isMobile ? 'snap-center shrink-0 w-[70vw]' : 'w-full md:w-[30%]'
-      } bg-white rounded-lg shadow-lg overflow-hidden drop-shadow-xl `}
-    >
-      <div className="bg-white p-4 rounded-lg shadow-xl">
-        <div className="flex mb-2">
-          {[...Array(5)].map((_, j) => (
-            <svg
-              key={j}
-              className="w-4 h-4 text-[#6AA896]"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-          ))}
-        </div>
-        <p className="text-xs font-bold text-[#666666] mb-2">
-          Snabb och smidig process!
-        </p>
-        <p className="text-xs text-[#787878]">
-          Fick snabbt hjälp av veterinären!
-        </p>
-        <div className="mt-10">
-          <span className="text-xs text-gray-500">Åsa, 42år</span>
-        </div>
-      </div>
-    </div>
-  ))
-
   return (
     <main>
       {/* Hero Section */}
@@ -95,7 +51,7 @@ export default function Herosection() {
           {/* Left Side - Text Content */}
           <div className="w-full md:w-1/2 p-4 md:p-12 z-10">
             <h1 className="text-2xl 2xl:text-4xl xl:text-2xl font-bold tracking-wide drop-shadow-[2px_2px_2px_rgba(0,0,0,1)]">
-              Få recept på{" "}
+              Få recept på{' '}
               <span className="text-[#B2FFE4] text-2xl 2xl:text-4xl xl:text-2xl lg:text-xl  font-mono tracking-normal font-bold h-10 md:text-5xl md:drop-shadow-[2px_2px_2px_rgba(20,20,20,1)]">
                 fästingmedel
               </span>
@@ -113,7 +69,7 @@ export default function Herosection() {
               <li className="flex items-center space-x-2 gap-2 drop-shadow-md">
                 <span className="text-white bg-[#B2FFE4] h-6 w-6 rounded-full">
                   <Check className="text-[#004E49] mt-0.5 ml-0.5" />
-                </span>{" "}
+                </span>{' '}
                 <span className="text-white ">
                   Skippa veterinärbesök och videosamtal
                 </span>
@@ -121,7 +77,7 @@ export default function Herosection() {
               <li className="flex items-center space-x-2 gap-2 drop-shadow-md">
                 <span className="text-white bg-[#B2FFE4] h-6 w-6 rounded-full">
                   <Check className="text-[#004E49] mt-0.5 ml-0.5" />
-                </span>{" "}
+                </span>{' '}
                 <span className="text-white ">Recept inom 15 minuter</span>
               </li>
             </ul>
@@ -138,8 +94,8 @@ export default function Herosection() {
               <Image
                 src={
                   isMobile
-                    ? "/images/landing/heromobile.png"
-                    : "/images/landing/hero.png"
+                    ? '/images/landing/heromobile.png'
+                    : '/images/landing/hero.png'
                 }
                 alt="Cat and Dog"
                 fill
@@ -149,7 +105,7 @@ export default function Herosection() {
               />
             </div>
           </div>
-        </div>{" "}
+        </div>{' '}
       </section>
 
       {/* Stats Section */}
@@ -160,7 +116,7 @@ export default function Herosection() {
             <div className="text-center p-4 relative">
               <div className="text-2xl font-medium text-[#004E49]">4,8</div>
               <div className="tracking-wide font-medium text-[#004E49] text-base">
-                i betyg av djurägare{" "}
+                i betyg av djurägare{' '}
               </div>
               <div className="flex justify-center mt-2">
                 {[...Array(5)].map((_, i) => (
@@ -189,7 +145,7 @@ export default function Herosection() {
                 15 minutes
               </div>
               <div className="tracking-wide font-medium text-[#004E49] text-base">
-                i snitt till recept{" "}
+                i snitt till recept{' '}
               </div>
             </div>
 
@@ -197,7 +153,7 @@ export default function Herosection() {
             <div className="text-center p-4">
               <div className="text-2xl font-bold text-[#004E49]">+50,000</div>
               <div className="tracking-wide font-medium text-[#004E49] text-base">
-                Djur har fått vård av oss{" "}
+                Djur har fått vård av oss{' '}
               </div>
               <div className="flex justify-center mt-1">
                 <Image
@@ -220,52 +176,8 @@ export default function Herosection() {
       {/* Payment Section */}
       <Payment />
       {/* Reviews Section */}
-      <section className="py-12 bg-white md:bg-[#F3FFF6] shadow-xl">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-left md:text-center mb-4">
-            <span className="text-sm text-[#787878]">Läs deras historia</span>
-          </div>
-
-          <h2 className="w-full md:w-[60%] mx-auto text-left md:text-center text-2xl md:text-4xl font-bold text-[#004E49] mb-8">
-            Läs vad andra hund- och kattägare tycker om oss
-          </h2>
-
-          {isMobile ? (
-            <div className="relative">
-              <div
-                ref={sliderRef}
-                className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-4 pb-4"
-                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-              >
-                {reviews}
-              </div>
-              <button
-                onClick={() => scroll('left')}
-                className="absolute hidden left-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10"
-                aria-label="Previous review"
-              >
-                <ChevronLeft className="text-[#004E49]" />
-              </button>
-              <button
-                onClick={() => scroll('right')}
-                className="absolute hidden right-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10"
-                aria-label="Next review"
-              >
-                <ChevronRight className="text-[#004E49]" />
-              </button>
-            </div>
-          ) : (
-            <div className="hidden md:flex gap-4">{reviews}</div>
-          )}
-
-          <div className="text-center mt-8 md:w-1/2 mx-auto">
-            <button className="bg-[#004E49] text-white px-24 py-2 tracking-wide shadow-xl rounded-md hover:bg-opacity-90 transition-colors">
-              Få recept nu
-            </button>
-          </div>
-        </div>
-      </section>
+      <Review />
       <FAQ />
     </main>
-  );
+  )
 }
