@@ -69,17 +69,17 @@ export default function Herosection() {
   return (
     <main className="  ">
       {/* Hero Section */}
-      <section className="bg-[#004E49]  text-white relative overflow-hidden shadow-xl">
+      <section className="bg-[#004E49]   text-white relative overflow-hidden shadow-xl">
         <div className="container mx-auto flex flex-col-reverse md:flex-row items-center">
           {/* Left Side - Text Content */}
           <div className="w-full md:w-1/2 p-4 md:p-12 z-10">
-            <h1 className="text-2xl md:text-5xl font-bold tracking-wide drop-shadow-[2px_2px_2px_rgba(0,0,0,1)]">
-              Få recept på{' '}
-              <span className="text-[#B2FFE4]  font-mono tracking-normal font-bold h-10 md:text-5xl md:drop-shadow-[2px_2px_2px_rgba(20,20,20,1)]">
+            <h1 className="text-2xl 2xl:text-4xl xl:text-2xl font-bold tracking-wide drop-shadow-[2px_2px_2px_rgba(0,0,0,1)]">
+              Få recept på{" "}
+              <span className="text-[#B2FFE4] text-2xl 2xl:text-4xl xl:text-2xl lg:text-xl  font-mono tracking-normal font-bold h-10 md:text-5xl md:drop-shadow-[2px_2px_2px_rgba(20,20,20,1)]">
                 fästingmedel
               </span>
             </h1>
-            <h1 className="text-2xl md:text-5xl font-bold tracking-wide drop-shadow-[2px_2px_2px_rgba(0,0,0,1)]">
+            <h1 className="text-2xl 2xl:text-4xl xl:text-2xl font-bold tracking-wide drop-shadow-[2px_2px_2px_rgba(0,0,0,1)]">
               av veterinär online
             </h1>
             <ul className="mt-6 space-y-3">
@@ -92,7 +92,7 @@ export default function Herosection() {
               <li className="flex items-center space-x-2 gap-2 drop-shadow-md">
                 <span className="text-white bg-[#B2FFE4] h-6 w-6 rounded-full">
                   <Check className="text-[#004E49] mt-0.5 ml-0.5" />
-                </span>{' '}
+                </span>{" "}
                 <span className="text-white ">
                   Skippa veterinärbesök och videosamtal
                 </span>
@@ -100,7 +100,7 @@ export default function Herosection() {
               <li className="flex items-center space-x-2 gap-2 drop-shadow-md">
                 <span className="text-white bg-[#B2FFE4] h-6 w-6 rounded-full">
                   <Check className="text-[#004E49] mt-0.5 ml-0.5" />
-                </span>{' '}
+                </span>{" "}
                 <span className="text-white ">Recept inom 15 minuter</span>
               </li>
             </ul>
@@ -112,25 +112,23 @@ export default function Herosection() {
           </div>
 
           {/* Right Side - Image */}
-          <div className="w-full md:absolute md:right-0 md:top-0 md:bottom-0 md:w-1/2 h-[450px] md:h-full">
+          <div className="w-full  md:absolute md:right-0 md:top-0 md:bottom-0 2xl:w-[50%] lg:w-[36rem] xl:w-[40rem] h-[450px] md:h-full ">
             <div className="relative w-full h-full">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#004E49] to-transparent z-10 md:w-32 hidden md:block" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#004E49] to-transparent z-10 md:hidden opacity-50" />
               <Image
                 src={
                   isMobile
-                    ? '/images/landing/heromobile.png'
-                    : '/images/landing/hero.png'
+                    ? "/images/landing/heromobile.png"
+                    : "/images/landing/hero.png"
                 }
                 alt="Cat and Dog"
                 fill
-                className="object-cover object-center "
+                className="object-cover  object-center    h-full"
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
-        </div>{' '}
+        </div>{" "}
       </section>
 
       {/* Stats Section */}
@@ -141,7 +139,7 @@ export default function Herosection() {
             <div className="text-center p-4 relative">
               <div className="text-2xl font-medium text-[#004E49]">4,8</div>
               <div className="tracking-wide font-medium text-[#004E49] text-base">
-                i betyg av djurägare{' '}
+                i betyg av djurägare{" "}
               </div>
               <div className="flex justify-center mt-2">
                 {[...Array(5)].map((_, i) => (
@@ -170,7 +168,7 @@ export default function Herosection() {
                 15 minutes
               </div>
               <div className="tracking-wide font-medium text-[#004E49] text-base">
-                i snitt till recept{' '}
+                i snitt till recept{" "}
               </div>
             </div>
 
@@ -178,7 +176,7 @@ export default function Herosection() {
             <div className="text-center p-4">
               <div className="text-2xl font-bold text-[#004E49]">+50,000</div>
               <div className="tracking-wide font-medium text-[#004E49] text-base">
-                Djur har fått vård av oss{' '}
+                Djur har fått vård av oss{" "}
               </div>
               <div className="flex justify-center mt-1">
                 <Image
@@ -233,5 +231,5 @@ export default function Herosection() {
       </section>
       <FAQ />
     </main>
-  )
+  );
 }
