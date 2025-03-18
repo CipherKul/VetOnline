@@ -210,7 +210,7 @@ export default function Herosection() {
           )}
 
           <div className="text-center mt-8">
-            <button className="bg-[#004E49] text-white px-6 py-2 rounded-md hover:bg-opacity-90 transition-colors">
+            <button className="bg-[#004E49] text-white px-8 py-1 rounded-md hover:bg-opacity-90 transition-colors">
               Få recept nu
             </button>
           </div>
