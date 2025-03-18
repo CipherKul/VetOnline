@@ -1,11 +1,28 @@
 'use client'
 import useIsMobile from '@/hooks/useIsMobile'
+import { ChevronLeft, ChevronRight, Star } from 'lucide-react'
 import Image from 'next/image'
+import { useRef } from 'react'
 import TestimonialImage from '@/public/testimonial/image.svg'
 
-// Testimonials Section
 const Midsection = () => {
+  const sliderRef = useRef<HTMLDivElement>(null)
   const isMobile = useIsMobile()
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (sliderRef.current) {
+      const scrollAmount = sliderRef.current.clientWidth
+      const newScrollLeft =
+        direction === 'left'
+          ? sliderRef.current.scrollLeft - scrollAmount
+          : sliderRef.current.scrollLeft + scrollAmount
+
+      sliderRef.current.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth',
+      })
+    }
+  }
   const testimonials = [
     {
       id: 1,
@@ -26,41 +43,86 @@ const Midsection = () => {
 
   return (
     <>
-      <section className="py-14 md:bg-[#F3FFF6] shadow-gray-200 shadow-lg">
-        <div className="container mx-auto px-4">
-          <p className="text-left md:text-center text-[#787878] text-sm mb-2">
-            Fakta om oss
-          </p>
-          <h2 className="text-left md:text-center text-2xl md:text-5xl font-bold text-[#004E49] mb-8">
+      <section className="py-14 md:bg-[#F3FFF6] shadow-lg">
+        <div className="w-full px-4 md:px-0">
+          <p className="text-center text-[#787878]">Fakta och råd</p>
+          <h2 className="text-[#004E49] text-xl md:text-5xl font-bold mb-6 text-center">
             Läs vad veterinärer rekommenderar
           </h2>
 
-          <div className="w-[55%] mx-auto flex flex-wrap gap-6">
-            {testimonials.map((testimonial) => (
+          {isMobile ? (
+            <div className="relative">
               <div
-                key={testimonial.id}
-                className="w-[30%] bg-white rounded-t-lg shadow-lg shadown-gray-200"
+                ref={sliderRef}
+                className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-4"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
-                <div>
-                  <Image
-                    src={TestimonialImage}
-                    alt="Veterinarian with pet"
-                    width={300}
-                    height={200}
-                    className="rounded-t-lg"
-                  />
-                </div>
-                <div className="flex flex-col gap-1 p-4">
-                  <h3 className="font-bold text-[#004E49] text-sm">
-                    {testimonial.name}
-                  </h3>
-                  <p className="text-[#004E49] text-xs">
-                    {testimonial.description}
-                  </p>
-                </div>
+                {testimonials.map((testimonial) => (
+                  <div
+                    key={testimonial.id}
+                    className="snap-center shrink-0 w-[85vw] bg-white rounded-lg shadow-lg"
+                  >
+                    <div>
+                      <Image
+                        src={TestimonialImage || '/placeholder.svg'}
+                        alt="Veterinarian with pet"
+                        width={500}
+                        height={200}
+                        className="rounded-t-lg w-full"
+                      />
+                    </div>
+                    <div className="p-4 space-y-2">
+                      <h3 className="font-bold text-[#004E49] text-sm">
+                        {testimonial.name}
+                      </h3>
+                      <p className="text-[#004E49] text-xs">
+                        {testimonial.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+              <button
+                onClick={() => scroll('left')}
+                className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10"
+              >
+                <ChevronLeft className="text-[#004E49]" />
+              </button>
+              <button
+                onClick={() => scroll('right')}
+                className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10"
+              >
+                <ChevronRight className="text-[#004E49]" />
+              </button>
+            </div>
+          ) : (
+            <div className="w-full md:w-[55%] mx-auto flex flex-wrap gap-6">
+              {testimonials.map((testimonial) => (
+                <div
+                  key={testimonial.id}
+                  className="w-full md:w-[30%] bg-white rounded-lg shadow-lg"
+                >
+                  <div>
+                    <Image
+                      src={TestimonialImage || '/placeholder.svg'}
+                      alt="Veterinarian with pet"
+                      width={300}
+                      height={200}
+                      className="rounded-t-lg"
+                    />
+                  </div>
+                  <div className="p-4 space-y-2">
+                    <h3 className="font-bold text-[#004E49] text-sm">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-[#004E49] text-xs">
+                      {testimonial.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
