@@ -11,13 +11,13 @@ export default function About() {
                 Vi behandlar fästingar
               </span>
               <div>
-                <h2 className="text-xl md:text-4xl font-bold text-[#004E49]">
+                <h2 className="text-2xl md:text-4xl font-bold text-[#004E49]">
                   Få recept av våra
                 </h2>
-                <h2 className="text-xl md:text-4xl font-bold text-[#004E49]">
+                <h2 className="text-2xl md:text-4xl font-bold text-[#004E49]">
                   veterinärer och mer tid
                 </h2>
-                <h2 className="text-xl md:text-4xl font-bold text-[#004E49]">
+                <h2 className="text-2xl md:text-4xl font-bold text-[#004E49]">
                   för lek och gos
                 </h2>
                 <button className="bg-[#004E49] hidden md:flex w-[60%] mt-4 text-white cursor-pointer px-8 py-2 rounded-md hover:bg-opacity-90 transition-colors shadow-xl shadow-gray-400">
@@ -25,8 +25,8 @@ export default function About() {
                 </button>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row gap-8  items-start md:w-[50%]">
-              <div className="w-full border-l-[1px] border-[#004E49] space-y-8 relative">
+            <div className="flex flex-col md:flex-row gap-8 w-full items-start md:w-[50%] pt-4 md:pt-0">
+              <div className="w-full border-t-[1px] md:border-t-0 md:border-l-[1px] border-[#004E49] space-y-4 md:space-y-8 relative">
                 <div className="flex items-center gap-3 pt-3 pl-3">
                   <Image
                     src="/images/landing/doge.png"
@@ -43,7 +43,7 @@ export default function About() {
                   />
                 </div>
                 <div className="w-full h-px bg-[#004E49]"></div>
-                <div className="flex items-center gap-3 pb-3 pl-3">
+                <div className="flex items-center gap-3 pb-3 pl-3 text-[#004E49] border-b-[1px] md:border-b-0">
                   <Image
                     src="/images/landing/cat.png"
                     alt="Cat icon"
