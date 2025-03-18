@@ -20,7 +20,7 @@ export default function About() {
                 <h2 className="text-2xl md:text-4xl font-bold text-[#004E49]">
                   för lek och gos
                 </h2>
-                <button className="bg-[#004E49] hidden md:flex w-[60%] mt-4 text-white cursor-pointer px-8 py-2 rounded-md hover:bg-opacity-90 transition-colors shadow-xl shadow-gray-400">
+                <button className="bg-[#004E49] hidden md:block w-[60%] mt-4 text-white cursor-pointer px-8 py-2 rounded-md hover:bg-opacity-90 transition-colors shadow-xl shadow-gray-400">
                   Få recept nu
                 </button>
               </div>

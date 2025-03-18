@@ -2,9 +2,9 @@ import Image from 'next/image'
 
 export default function Payment() {
   return (
-    <section className="py-12 bg-[#F3FFF6] sm:bg-white">
+    <section className="py-12 bg-[#F3FFF6] md:bg-white">
       <div className="container mx-auto px-4 max-w-5xl text-center">
-        <div className="flex gap-2 justify-center items-center mb-6">
+        <div className="flex flex-row-reverse justify-between md:flex-row gap-2 md:justify-center items-center mb-6">
           <Image
             src="/images/landing/badge.png"
             alt="Check"
@@ -15,11 +15,11 @@ export default function Payment() {
           <p className="text-sm text-[#004E49]">Betalningsmetoder</p>
         </div>
 
-        <h3 className="text-3xl md:text-4xl font-bold text-[#004E49] mb-8">
+        <h3 className="text-3xl md:text-4xl text-justify md:text-center font-bold text-[#004E49] mb-8">
           Vi erbjuder följande trygga betalsätt
         </h3>
 
-        <div className="container mx-auto flex flex-wrap justify-center items-center gap-6 md:gap-10">
+        <div className="container mx-auto flex flex-wrap md:justify-center items-center gap-6 md:gap-10">
           <Image
             src="/images/landing/klarna.png"
             alt="Klarna"
