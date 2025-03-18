@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-// import Navbar from "../layout/Navbar"
 import { Check } from "lucide-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -41,12 +40,12 @@ export default function Herosection() {
 
   const reviews = [...Array(5)].map((_, i) => (
     <div key={i} className="px-2">
-      <div className="bg-white p-4 rounded-lg shadow-sm">
-        <div className="flex justify-center mb-2">
+      <div className="bg-white p-4 rounded-lg shadow-xl">
+        <div className="flex mb-2">
           {[...Array(5)].map((_, j) => (
             <svg
               key={j}
-              className="w-4 h-4 text-[#004E49]"
+              className="w-4 h-4 text-[#6AA896]"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -54,13 +53,13 @@ export default function Herosection() {
             </svg>
           ))}
         </div>
-        <p className="text-sm text-[#004E49] text-center mb-2">
+        <p className="text-xs font-bold text-[#666666] mb-2">
           Snabb och smidig process!
         </p>
-        <p className="text-xs text-gray-600 text-center">
+        <p className="text-xs text-[#787878]">
           Fick snabbt hjälp av veterinären!
         </p>
-        <div className="text-center mt-2">
+        <div className="mt-2">
           <span className="text-xs text-gray-500">Åsa, 42år</span>
         </div>
       </div>
@@ -202,7 +201,7 @@ export default function Herosection() {
       {/* Payment Section */}
       <Payment />
       {/* Reviews Section */}
-      <section className="py-12 bg-[#F3FFF6]">
+      <section className="py-12 bg-white sm:bg-[#F3FFF6]]">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-4">
             <span className="text-sm text-[#004E49]">Läs deras historia</span>
@@ -220,13 +219,13 @@ export default function Herosection() {
               <Slider {...sliderSettings}>{reviews}</Slider>
             </div>
           ) : (
-            <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 ">
               {reviews}
             </div>
           )}
 
-          <div className="text-center mt-8">
-            <button className="bg-[#004E49] text-white px-8 py-1 rounded-md hover:bg-opacity-90 transition-colors">
+          <div className="text-center mt-8 md:w-1/2 mx-auto">
+            <button className="bg-[#004E49] text-white px-24 py-1 tracking-wide shadow-xl rounded-md hover:bg-opacity-90 transition-colors">
               Få recept nu
             </button>
           </div>
