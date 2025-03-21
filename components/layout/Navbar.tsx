@@ -1,14 +1,15 @@
-import { useState } from "react";
-import { Menu } from "lucide-react";
-import Link from "next/link";
+'use client'
+import { useState } from 'react'
+import { Menu } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <nav className="bg-[#004E49] tracking-wide text-sm text-white p-2">
       <div className="translate-y-1 absolute right-4 ">
-        {" "}
+        {' '}
         <button className=" md:hidden  border-2 font-medium tracking-wide  border-white shadow-xl  px-4 py-[0.25rem]  rounded-md hover:bg-white hover:text-teal-900">
           Börja här
         </button>
@@ -86,7 +87,7 @@ export default function Navbar() {
             Om oss
           </Link>
           <div className="translate-y-1">
-            {" "}
+            {' '}
             <button className="hidden md:block border-2 font-medium tracking-wide  border-white shadow-xl  px-6 py-[0.25rem] mr-4 rounded-md hover:bg-white hover:text-teal-900">
               Börja här
             </button>
@@ -117,5 +118,5 @@ export default function Navbar() {
         </nav>
       )}
     </nav>
-  );
+  )
 }
